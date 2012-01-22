@@ -171,6 +171,7 @@ replacements.
 >
   let g:surround_45 = "<% \r %>"
   let g:surround_61 = "<%= \r %>"
+  let g:surround_91 = "[[ \r ]]"
 <
 Advanced, experimental, and subject to change:  One can also prompt for
 replacement text.  The syntax for this is to surround the replacement in pairs

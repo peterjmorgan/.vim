@@ -15,6 +15,7 @@ set nowrap              " Do not wrap words (view)
 set showcmd             " Show (partial) command in status line.
 set showmatch           " Show matching brackets.
 set ruler               " line and column number of the cursor position
+set cursorline
 set wildmenu            " enhanced command completion
 set visualbell          " use visual bell instead of beeping
 set laststatus=2        " always show the status line
@@ -23,6 +24,8 @@ set listchars=tab:▷⋅,trail:·
 set list
 
 colorscheme vividchalk
+"colorscheme desert
+
 set background=dark
 
 " highlight spell errors
@@ -50,8 +53,8 @@ set cinoptions=:0,(s,u0,U1,g0,t0 " some indentation options ':h cinoptions' for 
 set modelines=5         " number of lines to check for vim: directives at the start/end of file
 "set fixdel                 " fix terminal code for delete (if delete is broken but backspace works)
 
-set ts=4                " number of spaces in a tab
-set sw=4                " number of spaces for indent
+set ts=2                " number of spaces in a tab
+set sw=2                " number of spaces for indent
 set et                  " expand tabs into spaces
 
 " mouse settings
@@ -85,4 +88,6 @@ set nofoldenable        "dont fold by default "
 
 " extended '%' mapping for if/then/else/end etc
 runtime macros/matchit.vim
+
+source ~/.vim/vimwiki.vim
 

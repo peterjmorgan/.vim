@@ -42,20 +42,18 @@ nmap <Leader>b :MiniBufExplorer<cr>
 
 let g:Conque_Read_Timeout = 50 " timeout for waiting for command output.
 let g:Conque_TERM = 'xterm'
+let g:ConqueTerm_SendVisKey = '<F1>'
 " ,sh shell window
 nmap <Leader>sh :ConqueSplit bash<cr>
 " ,r run command
-nmap <Leader>r :ConqueSplit 
+nmap <Leader>r :ConqueSplit irb
+
 
 " yankring
 let g:yankring_replace_n_pkey = '<leader>['
 let g:yankring_replace_n_nkey = '<leader>]'
 " ,y to show the yankring
 nmap <leader>y :YRShow<cr>
-
-" rails
-" completing Rails hangs a lot
-"let g:rubycomplete_rails = 1
 
 " command-t
 nmap <unique> <silent> <Leader><Leader> :CommandT<CR>
@@ -68,3 +66,10 @@ nmap <leader>g :Ggrep
 " Ack
 " ,a for Ack
 nmap <leader>k :Ack
+
+" Textile
+"set g:TextileBrowser="Google Chrome"
+
+" VimWiki
+au FileType vimwiki command! W call vimwiki#html#Wiki2HTML(expand(VimwikiGet('path_html')), expand('%'))
+au FileType vimwiki command! WA call vimwiki#html#WikiAll2HTML(expand(VimwikiGet('path_html')))
